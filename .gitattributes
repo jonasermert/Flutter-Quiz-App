@@ -1,5 +1,50 @@
-*.dart linguist-detectable=true
-*.cmake linguist-detectable=false
-*.cpp linguist-detectable=false
-*.rb linguist-detectable=false
-*.html linguist-detectable=false
+# ---------------------------------------------------------------------------
+# Globale Einstellungen (Auto-Erkennung für Textdateien)
+# ---------------------------------------------------------------------------
+* text=auto
+
+# ---------------------------------------------------------------------------
+# Erpzinge LF (Unix-Zeilenenden) für Quellcode
+# Das verhindert "Diff-Chaos", wenn Teammitglieder Windows nutzen
+# ---------------------------------------------------------------------------
+*.dart text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.sh text eol=lf
+*.xml text eol=lf
+*.gradle text eol=lf
+*.plist text eol=lf
+*.config text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+
+# ---------------------------------------------------------------------------
+# Binärdateien (Diese dürfen NIEMALS verändert werden)
+# ---------------------------------------------------------------------------
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mov binary
+*.mp4 binary
+*.otf binary
+*.ttf binary
+*.pdf binary
+
+# ---------------------------------------------------------------------------
+# Spezielle Formate
+# ---------------------------------------------------------------------------
+*.bat text eol=crlf
+*.jar binary
+*.py text eol=lf
+
+# ---------------------------------------------------------------------------
+# GitHub Linguist (Verbessert die Sprachstatistik in deinem Repository)
+# ---------------------------------------------------------------------------
+# Markiere generierten Code, damit er in Diffs standardmäßig ausgeblendet wird
+*.g.dart linguist-generated
+*.freezed.dart linguist-generated
+*.generated.dart linguist-generated

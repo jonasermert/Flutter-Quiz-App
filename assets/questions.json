@@ -1,0 +1,124 @@
+{
+	"questions": [
+		{
+			"question": "What is the purpose of a Key in Flutter widgets?",
+			"answers": [
+				"To uniquely identify widgets in the tree and preserve state during rebuilds",
+				"To encrypt widget properties at runtime",
+				"To improve network performance in Flutter apps",
+				"To enable hot reload"
+			],
+			"correct": [1]
+		},
+		{
+			"question": "Which statements about const constructors are true?",
+			"answers": [
+				"They allow objects to be compile-time constants when all fields are immutable",
+				"They always improve runtime performance, even if used incorrectly",
+				"They can reduce rebuild cost by reusing identical instances",
+				"They can only be used in StatefulWidget"
+			],
+			"correct": [1, 3]
+		},
+		{
+			"question": "What does the Navigator do in Flutter?",
+			"answers": [
+				"Manages a stack of routes (pages) for navigation",
+				"Synchronizes animations with the device refresh rate",
+				"Stores persistent app settings automatically",
+				"Generates platform-specific code for iOS and Android"
+			],
+			"correct": [1]
+		},
+		{
+			"question": "Which widgets are commonly used to build responsive layouts?",
+			"answers": [
+				"MediaQuery",
+				"LayoutBuilder",
+				"Expanded",
+				"FutureBuilder"
+			],
+			"correct": [1, 2, 3]
+		},
+		{
+			"question": "What is the primary role of an InheritedWidget (and InheritedNotifier/InheritedModel)?",
+			"answers": [
+				"To efficiently propagate data down the widget tree and trigger rebuilds when it changes",
+				"To store files on disk securely",
+				"To replace StatefulWidget entirely",
+				"To handle platform channels"
+			],
+			"correct": [1]
+		},
+		{
+			"question": "Which statements about setState() are true?",
+			"answers": [
+				"It triggers a rebuild of the State's subtree",
+				"It must be called only when mounted is true",
+				"It automatically performs async work for you",
+				"It can be called from anywhere without a BuildContext"
+			],
+			"correct": [1, 2]
+		},
+		{
+			"question": "What is the purpose of the SafeArea widget?",
+			"answers": [
+				"To avoid system UI intrusions like notches, status bar, and navigation bar",
+				"To prevent memory leaks in State objects",
+				"To automatically add scrolling to the page",
+				"To optimize shader compilation"
+			],
+			"correct": [1]
+		},
+		{
+			"question": "Which statements about FutureBuilder are true?",
+			"answers": [
+				"It rebuilds based on the state of a Future (loading, error, data)",
+				"It caches results automatically even if the Future changes",
+				"It should generally be given a stable Future to avoid restarting work on rebuilds",
+				"It can only be used with Stream"
+			],
+			"correct": [1, 3]
+		},
+		{
+			"question": "Which widgets are best suited for showing large lists efficiently?",
+			"answers": [
+				"ListView.builder",
+				"GridView.builder",
+				"ListView(children: ...)",
+				"SingleChildScrollView with Column"
+			],
+			"correct": [1, 2]
+		},
+		{
+			"question": "What is a common benefit of using a SliverList inside a CustomScrollView?",
+			"answers": [
+				"It enables composing multiple scrollable slivers (app bars, lists, grids) in one scroll view",
+				"It automatically converts REST APIs into models",
+				"It makes all widgets const by default",
+				"It prevents all rebuilds during scrolling"
+			],
+			"correct": [1]
+		},
+		{
+			"question": "Which statements about Streams in Flutter are true?",
+			"answers": [
+				"A Stream can emit multiple values over time",
+				"StreamBuilder rebuilds when new events arrive",
+				"A Stream always completes immediately after emitting one value",
+				"Streams can be listened to without canceling subscriptions"
+			],
+			"correct": [1, 2]
+		},
+		{
+			"question": "What is the purpose of the pubspec.yaml file in a Flutter project?",
+			"answers": [
+				"To declare dependencies, assets, and fonts for the project",
+				"To configure iOS code signing",
+				"To define the widget tree structure",
+				"To store runtime logs"
+			],
+			"correct": [1]
+		}
+	]
+}
