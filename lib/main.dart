@@ -1,4 +1,5 @@
 import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutterquizapp/quiz_widgets.dart';
 
@@ -6,9 +7,7 @@ import 'models.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final quiz = await QuizLoader.loadFromBundle(
-    'assets/questions.json',
-  );
+  final quiz = await QuizLoader.loadFromBundle('assets/questions.json');
   log(quiz.toString());
   runApp(MainApp(quiz: quiz));
 }

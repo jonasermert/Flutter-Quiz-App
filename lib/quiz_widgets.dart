@@ -260,24 +260,25 @@ class QuizRadioListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RadioListTile(
+    return RadioGroup<int>(
       groupValue: selectedIndex,
-      value: currentIndex,
-      onChanged:
-      isVerifying
-          ? null
-          : (int? newValue) {
-        if (newValue != null) {
-          onChanged?.call(newValue);
-        }
-      },
-      title: Text(answer, style: Theme.of(context).textTheme.bodyLarge),
-      controlAffinity: ListTileControlAffinity.leading,
-      contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-      tileColor: AppColors.getTileColor(
-        isVerifying: isVerifying,
-        isCorrect: isCorrect,
-        isSelected: selectedIndex == currentIndex,
+      onChanged: !isVerifying && onChanged != null
+          ? (int? newValue) {
+              if (newValue != null) {
+                onChanged!(newValue);
+              }
+            }
+          : (_) {}, // Empty callback when disabled
+      child: RadioListTile(
+        value: currentIndex,
+        title: Text(answer, style: Theme.of(context).textTheme.bodyLarge),
+        controlAffinity: ListTileControlAffinity.leading,
+        contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+        tileColor: AppColors.getTileColor(
+          isVerifying: isVerifying,
+          isCorrect: isCorrect,
+          isSelected: selectedIndex == currentIndex,
+        ),
       ),
     );
   }
