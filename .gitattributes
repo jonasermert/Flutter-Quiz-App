@@ -1,2 +1,31 @@
-# Auto detect text files and perform LF normalization
+# Auto detect text files and normalize line endings
 * text=auto
+
+# Dart / Flutter
+*.dart text
+*.yaml text
+*.yml text
+*.json text
+*.md text
+
+# Shell Scripts
+*.sh text eol=lf
+
+# Windows Scripts
+*.bat text eol=crlf
+
+# Images
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.svg text
+
+# Android
+*.keystore binary
+*.jks binary
+
+# iOS
+*.plist text
+
