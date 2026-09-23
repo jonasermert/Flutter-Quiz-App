@@ -5,32 +5,31 @@ import 'package:flutter/material.dart';
 
 class ConfettiWrapper extends StatelessWidget {
   const ConfettiWrapper({super.key, required this.confettiController});
+
   final ConfettiController confettiController;
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.center,
-      child: ConfettiWidget(
-        confettiController: confettiController,
-        numberOfParticles: 30,
-        blastDirectionality:
-        BlastDirectionality
-            .explosive,
-        shouldLoop: false,
-        colors: const [
-          Colors.green,
-          Colors.blue,
-          Colors.pink,
-          Colors.orange,
-          Colors.purple,
-        ],
-        createParticlePath: drawStar,
+    return IgnorePointer(
+      child: Align(
+        alignment: Alignment.center,
+        child: ConfettiWidget(
+          confettiController: confettiController,
+          numberOfParticles: 30,
+          blastDirectionality: BlastDirectionality.explosive,
+          shouldLoop: false,
+          colors: const [
+            Color(0xFF20B8C9),
+            Colors.green,
+            Colors.blue,
+            Colors.orange,
+          ],
+          createParticlePath: drawStar,
+        ),
       ),
     );
   }
 
-  /// A custom Path to paint stars.
   Path drawStar(Size size) {
     double degToRad(double deg) => deg * (pi / 180.0);
     const numberOfPoints = 5;
