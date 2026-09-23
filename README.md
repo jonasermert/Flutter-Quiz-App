@@ -4,7 +4,7 @@ Eine Flutter Quiz App mit Fragen aus `assets/questions.json`. Das Design orienti
 
 ## Funktionen
 
-- Fragen und Antworten werden pro Runde gemischt.
+- Die Reihenfolge der Fragen wird pro Runde gemischt.
 - Einzel- und Mehrfachantworten werden unterstützt.
 - Nach jeder Frage werden die richtigen Antworten angezeigt.
 - Am Ende erscheint das Ergebnis; bei voller Punktzahl gibt es Konfetti.
